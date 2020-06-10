@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "CSS_1.css" %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>Device search step 2, select your model among SAMSUNG devices</title>
+	</head>
+
+	<body>
+		<%= render 'header' %>
+
+		<table>
+			<thead>
+				<tr>
+					<td colspan="3"> <img class="logo_" src="/images/samsung_logo.png" alt="SAMSUNG"> </td>
+				</tr>
+				<form action="/search/samsung2" method="get">
+				<tr>
+					<section class="series-selection">
+					<th><input type="radio" name="series" id="GxyS" value="GxyS">
+					    <label for="GxyS">Galaxy S</label>
+					</th>
+					<th><input type="radio" name="series" id="GxyN" value="GxyN">
+					    <label for="GxyN">Galaxy Note</label>
+					</th>
+					<th><input type="radio" name="series" id="GxyA" value="GxyA">
+					    <label for="GxyA">Galaxy A</label>
+					</th>
+				</section>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="3"> 
+						<section class="submission">
+        					<input type="submit" value="Submit">
+        				</section>
+        			</td>
+        		</tr>
+        	</tbody>
+        </form>
+			
+		<hr/>
+
+	</body>
+</html>

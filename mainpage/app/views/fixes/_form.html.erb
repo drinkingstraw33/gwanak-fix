@@ -1,0 +1,33 @@
+	<%= form_for [@shop, @shop.fixes.build] do |f| %>
+			<p>
+			<%= f.label :phone %><br>
+			<%= f.text_field :phone %>
+			</p>
+			<p>
+			<%= f.label :screen %><br>
+			<%= f.text_field :screen %>
+			</p>
+			<p>
+			<%= f.label :battery %><br>
+			<%= f.text_field :battery %>
+			</p>
+			<p>
+			<%= f.label :mainboard %><br>
+			<%= f.text_field :mainboard %>
+			</p>
+			<p>
+			<%= f.label :water %><br>
+			<%= f.text_field :water %>
+			</p>
+			<p>
+			<%= f.label :back %><br>
+			<%= f.text_field :back %>
+			</p>
+			<p>
+			<%= f.label :camera %><br>
+			<%= f.text_field :camera %>
+			</p>
+			<p>
+			<%= f.submit %>
+			</p>
+			<% end %>

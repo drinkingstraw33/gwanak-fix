@@ -1,0 +1,274 @@
+body {
+	width: 1920px
+	height: 1080px;
+}
+
+.header {
+  display: block;
+  padding-right: 10px
+  padding-left: 40px;
+}
+
+.logo {
+  max-width: 200px;
+  padding: 30px;
+  padding-bottom: 0px;
+}
+
+.logo_ {
+  max-width: 250px;
+  padding: 20px;
+}
+
+.backgr {
+  max-width: 1400px;
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  padding-bottom: 50px;
+  z-index: 1;
+  display: inline-block;
+  background: #447F94;
+  color: white;
+  border: 3px solid black;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font-family: 'Gugi', bold;
+  font: 24px;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 40px;
+  right: 520px;
+}
+
+.nav {
+	text-align : right;
+}
+
+.nav a{
+  padding-top: 10px;
+  box-sizing: border-box;
+  background-color: #466093;
+  color: white;
+  width: 110px;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Gugi', 'serif';
+}
+
+a {
+  text-decoration: none;
+}
+
+.split_ver {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.split_hor {
+	height: 30%;
+}
+
+.left {
+  left: 0;
+  text-align: right;
+ }
+
+.right {
+  right: 0;
+  text-align: left;
+}
+
+.top {
+	top: 0;
+}
+
+.bottom {
+	bottom: 0;
+}
+
+.centered {
+  font-family: 'Nanum Myeongjo';
+  color: black;
+  text-shadow;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  text-align: center;
+  margin: 20px auto;
+  overflow-y: scroll;
+  position: static;
+  width: auto;
+  font-size: 18px;
+}
+
+thead{
+  font-family: 'Balsamiq Sans', 'Do Hyeon';
+  font-size: 30px;
+  letter-spacing: 4px;
+  padding: 10px;
+}
+
+tr th {
+  background: #447F94;
+  color: #f4f7f8;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+  padding: 20px;
+  width: 33.3333%;
+}
+
+tr td {
+  background: #f4f7f8;
+  padding: 20px;
+  width: 33.3333%;
+  font-family: 'Nanum Myeongjo';
+}
+
+.faq > span,
+.notice > span {
+    font-size: 20px;
+    text-align: left;
+    display: block;
+    color: #a4b5c1;
+}
+
+.faq .accordion {
+    margin-top: 16px;
+    text-align: left;
+    margin-bottom: 96px;
+}
+.faq .acdn-header {
+    color: #2F3E4E;
+    font-size: 20px;
+    font-family: 'Nanum Myeongjo';
+    display: block;
+    padding: 12px 50px;
+    border-top: 1px solid #d2e0ea;
+    position: relative;
+}
+.faq .acdn-header[aria-expanded="true"] {
+    color: #0a67ab;
+}
+.faq .acdn-header:before {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    content: "Q.";
+    padding: 0 4px;
+    font-weight: 700;
+}
+.faq .acdn-header:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+    border: solid #d2e0ea;
+    border-width: 3px 3px 0 0;
+    transform: rotate(135deg);
+    transition: transform 0.6s, border-color: 0.6s;
+}
+.faq .acdn-header[aria-expanded="true"]:after {
+    transform: rotate(-45deg);    
+    top: 24px;
+    border-color: #0a67ab;
+}
+.faq .acdn-body {
+    padding: 12px 8px 32px 40px; 
+}
+.kakaolink {
+    position: fixed;
+    text-align: center;
+    right: 25px;
+    bottom: 25px;
+    overflow: hidden;
+    background: #fae101;
+    color: #3c1e1e;
+    font-weight:700;
+    font-size: 30px;
+    font-family: 'Balsamiq Sans', 'Do Hyeon';
+    height: 54px; 
+    display: inline-block;
+    border-radius: 27px;
+    padding-right: 20px;
+    padding-top: 14px;
+}
+
+.ask-kakao {
+  display: block;
+  position: relative;
+}
+.ask-kakao .kakaolink {
+    position: relative;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    left: 0;
+    top: auto;
+    bottom: auto;
+    margin-top: 24px;
+    box-shadow: none;
+    margin-bottom: 120px;
+}
+
+.viewTable  {
+    margin-top:-5px;
+}
+
+.viewTable table  {
+  text-align: center;
+  margin: 20px auto;
+  overflow-y: scroll;
+  position: static;
+  width: 60%;
+  font-size: 18px;
+}
+
+.viewTable td  {
+    width: 70%;
+}
+
+.company  {
+   font-family: 'Balsamiq Sans', 'Do Hyeon';
+   text-decoration: underline;
+   text-align: center;
+   font-size: 20px;
+
+}
+
+.condition h2  {
+   font-family: 'Nanum Myeongjo';
+   letter-spacing: 3px;
+   text-align: center;
+}
+
+.map p{
+   font-family: 'Nanum Myeongjo';
+   text-align: center;
+   font-size: 20px;
+   margin-bottom: 10px;
+   margin-top: 50px;
+}
+
+.mapimage {
+   text-align: center;
+   display: block;
+   margin: 2px;
+}

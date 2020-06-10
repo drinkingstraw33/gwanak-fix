@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "CSS_1.css" %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>Device search step 2, select your model among APPLE devices</title>
+	</head>
+
+	<body>
+		<%= render 'header' %>
+
+		<table>
+			<thead>
+				<tr>
+					<td colspan="3"> <img class="logo_" src="/images/apple_logo.png" alt="SAMSUNG"> </td>
+				</tr>
+				<form action="search/apple2" method="POST">
+				<tr>
+					<section class="series-selection">
+					<th><input type="radio" name="series" id="5s" value="5s">
+					    <label for="5s">SE & before 5S</label>
+					</th>
+					<th><input type="radio" name="series" id="6_8" value="6_8">
+					    <label for="6_8">6, 7, 8</label>
+					</th>
+					<th><input type="radio" name="series" id="X" value="X">
+					    <label for="X">after X</label>
+					</th>
+				</section>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="3"> 
+						<section class="submission">
+        					<input type="submit" value="Select">
+        				</section>
+        			</td>
+        		</tr>
+        	</form>
+        </tbody>
+			
+		<hr/>
+
+	</body>
+</html>

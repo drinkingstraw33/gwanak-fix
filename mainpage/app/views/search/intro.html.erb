@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<%= stylesheet_link_tag "CSS_1.css" %>		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>Select standard, Device or Location</title>
+	</head>
+
+	<body>
+		<%= render 'header' %>
+
+		
+		<a href="/search/company">
+			<div class="split_ver left">
+				<div class="centered">
+					<img class="logo" src="/images/device_bgp.png">
+					<h2><b>기종</b>으로 검색하기</h2>
+					<p>내 휴대폰과 파손유형을 기반으로</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="/search/location">	
+			<div class="split_ver right">
+				<div class="centered">
+					<img class="logo" src="/images/location_bgp.png">
+					<h2><b>위치</b>로 검색하기</h2>
+					<p>내가 사는 관악구 행정구역을 기반으로</p>
+				</div>
+			</div>
+		</a>
+	</hr>
+
+	</body>
+</html>

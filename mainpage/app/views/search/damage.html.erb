@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "CSS_1.css" %>
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Device search step 3, select your damage case. Ofc, optional.</title>
+	</head>
+
+	<body>
+		<%= render 'header' %>
+		<hr>
+		
+		<table>
+			<thead>
+				<tr>
+					<td colspan="3"> <img class="logo_" src="/images/damage.png" alt="Damage case"> </td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="3">
+					<form action="/shops/list" method="POST">
+					<section class="dmg-selection">
+          				<input type="checkbox" name="dmg" id="screen" value="screen">
+          				<label for="screen">액정파손</label>
+          				<br>
+          				<input type="checkbox" name="dmg" id="battery" value="battery">
+          				<label for="battery">배터리 교체</label>
+          				<br>
+          				<input type="checkbox" name="dmg" id="mainboard" value="mainboard">
+          				<label for="mainboard">메인보드</label>
+          				<br>
+          				<input type="checkbox" name="dmg" id="water" value="water">
+          				<label for="water">침수 세척</label>
+          				<br>
+          				<input type="checkbox" name="dmg" id="back" value="back">
+          				<label for="back">후면 액정</label>
+          				<br>
+          				<input type="checkbox" name="dmg" id="camera" value="camera">
+          				<label for="camera">카메라 렌즈</label>
+        		</section>
+        		<br>
+        		<section class="submission">
+        			<input type="submit" value="Submit">
+        		</section>
+        	</form>
+        </td>
+        <tr>
+					<td colspan="3"> <a href = "/welcome/list">잘 모르겠어요</a> </td>
+				</tr>  
+			</tbody>
+		<hr/>
+
+	</body>
+</html>

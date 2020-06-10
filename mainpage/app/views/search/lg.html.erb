@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "CSS_1.css" %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>Device search step 2, select your model among LG devices</title>
+	</head>
+
+	<body>
+		<%= render 'header' %>
+
+		<table>
+			<thead>
+				<tr>
+					<td colspan="3"> <img class="logo_" src="lg_logo.png" alt="LG"> </td>
+				</tr> 
+				<tr>
+					<th>V Series</th>
+					<th>Q Series</th>
+					<th>X Series</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+					<form action="/search/damage" method="POST">
+				<section class="model-selection">
+				     <label for="Vsr"></label>
+				     	<input list="Vsrs" id="Vsr" name="model">
+  				        <datalist id="Vsrs">
+				     		<option value="V60">60</option>
+			            	<option value="V50">50</option>
+			            	<option value="V40">40</option>
+			            	<option value="V35">35</option>
+			            	<option value="V30">30</option>
+			            	<option value="V20">20</option>
+			            	<option value="V10">10</option>
+			            </datalist>
+			            <br>
+			         <span>+?</span>
+          				<input type="radio" name="max" id="yes" value="yes">
+			          	<label for="yes">Yes</label>
+          				<input type="radio" name="max" id="no" value="yes">
+          				<label for="no">No</label>
+          				<br>
+          			<span>S?</span>
+          				<input type="radio" name="pro" id="yes" value="yes">
+			          	<label for="yes">Yes</label>
+          				<input type="radio" name="pro" id="no" value="yes">
+          				<label for="no">No</label>
+			        </section>
+			        <section class="submission">
+        			<input type="submit" value="Submit">
+        			</section>
+        		</form>
+			        </td>
+
+					<td>
+					<form action="/search/damage" method="POST">
+				<section class="model-selection">
+				     <label for="Qsr"></label>
+				     	<input list="Qsrs" id="Qsr" name="model">
+  				        <datalist id="Qsrs">
+				     		<option value="Q51">51</option>
+			            	<option value="Q70">70</option>
+			            	<option value="Q9">9</option>
+			            	<option value="Q8">8</option>
+			            	<option value="Q7">7</option>
+			            	<option value="Q6">6</option>
+			            </datalist>
+			            <br>
+			        </section>
+			        <section class="submission">
+        			<input type="submit" value="Submit">
+        			</section>
+        		</form>
+        	</td>
+					<td>
+						<form action="/search/damage" method="POST">
+				<section class="model-selection">
+				     <label for="Xsr"></label>
+				     	<input list="Xsrs" id="Xsr" name="model">
+  				        <datalist id="Xsrs">
+				     		<option value="X2a">2(2019)</option>
+			            	<option value="X6">6</option>
+			            	<option value="X4">4</option>
+			            	<option value="X2b">2(2015)</option>
+			            	<option value="X5">5</option>
+			            	<option value="X500">500</option>
+			            </datalist>
+			            <br>
+			        </section>
+			        <section class="submission">
+        			<input type="submit" value="Submit">
+        			</section>
+        		</form>
+        	</td>
+				</tr>  
+			</tbody>
+		<hr/>
+
+	</body>
+</html>

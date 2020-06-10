@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "CSS_1.css" %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>Device search step 2, select your model among non-Apple/Samsung/LG devices</title>
+	</head>
+
+	<body>
+		<%= render 'header' %>
+		<hr>
+
+		<table>
+			<thead>
+				<tr>
+					<td colspan="3"> <img class="logo_" src="/images/etc.png" alt="ETC"> </td>
+				</tr>
+			</thead>
+			<tbody> 
+				<tr>
+				<td colspan="3">
+				<form action="search/damage" method="POST">
+				<section class="cpny-selection">
+          			<label for="cpny">type or find your device manufacturer</label>
+          				<input list="cpnies" id="cpny" name="cpny">
+  				        <datalist id="cpnies">
+            				<option value="비츠모(Vitsmo)"></option>
+				            <option value="소니 모바일(Sony)"></option>
+            				<option value="샤프전자(SHARP)"></option>
+            				<option value="구글(Google)"></option>
+            				<option value="모토로라(Motorola)"></option>
+            				<option value="델(Dell)"></option>
+            				<option value="화웨이(Hwawei)"></option>
+            				<option value="샤오미(Xiaomi)"></option>
+            				<option value="레노버(LENOVO)"></option>
+            				<option value="노키아(NOKIA)"></option>
+            				<option value="에이수스(ASUS)"></option>
+            				<option value="마이크로소프트(Microsoft)"></option>
+          				</datalist>
+        		</section>
+        		<br>
+        		<section class="submission">
+        			<input type="submit" value="Select">
+        		</section>
+        	</form>
+        	</td>
+				</tr>
+			</tbody>
+		<hr/>
+
+	</body>
+</html>

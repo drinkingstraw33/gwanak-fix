@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "CSS_1.css" %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>Device search step 1, select the company</title>
+	</head>
+
+	<body>
+		<%= render 'header' %>
+		<hr>
+
+		<div class = "main">
+			<div class="split_ver left">
+				<div class="split_hor top">
+    				<a href="/search/apple1"> <img class = "logo_" src="/images/apple_logo.png" alt="Apple"> </a>
+				</div>
+				<div class="split_hor bottom">
+				<a href="/search/lg"> <img class = "logo_" src="/images/lg_logo.png" alt="LG"> </a>
+			</div>
+		</div>
+
+		<div class="split_ver right">
+			<div class="split_hor top">
+				<a href="/search/samsung1"> <img class = "logo_" src="/images/samsung_logo.png" alt="Samsung"> </a>
+			</div>
+			<div class="split_hor bottom">
+				<a href="/search/etc"> <img class = "logo_" src="/images/etc.png" alt="etc"> </a>
+			</div>
+		</div>
+
+	</body>
+</html>

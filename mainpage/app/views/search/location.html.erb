@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "CSS_1.css" %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>Device search step 1, select the company</title>
+	</head>
+
+	<body>
+<%= render 'header' %>
+<hr>
+<table>
+			<thead>
+				<tr>
+					<td colspan="3"> <img class="logo_" src="/images/location.png" alt="location"> </td>
+				</tr>
+			</thead>
+			<tbody> 
+				<tr>
+				<td colspan="3">
+				<form action="welcome/list" method="POST">
+				<section class="location-selection">
+          			<label for="loc">Select location</label>
+  				        <select id="loc">
+            				<option value="남현동">남현동</option>
+							<option value="봉천동">봉천동</option>
+            				<option value="신림동">신림동</option>
+          				</select>
+        		</section>
+        		<br>
+        		<section class="submission">
+        			<input type="submit" value="Submit">
+        		</section>
+        	</form>
+        	</td>
+				</tr>
+			</tbody>

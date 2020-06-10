@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "CSS_1.css" %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>Title Page Demo</title>
+	</head>
+
+	<body>
+		<%= render 'header' %>
+<hr/>
+		
+		<div class = "list">
+			<table style="max-width: 1000px;">
+				<thead>
+				<tr>
+					<th scope="col">위치</th>
+					<th scope="col">수리점명</th>
+					<th scope="col">영업시간</th>
+				</tr>
+				</thead>
+<div class="listbody">
+				<tbody>
+				<% @shops.each do |shop| %>
+				<tr>
+					<td>
+					<p><%= shop.dong %></p>
+					</td>
+					<td><p>
+						<%= link_to shop.title, shop_path(shop) %>
+						</p>
+					</td>
+					<td><p>
+						<%= shop.time %>
+						</p></td>
+					</tr>
+					<% end %>
+					
+				</tbody>
+</div>
+			</table>
+		</div>
+		<%= link_to 'New shop', new_shop_path %>
+	</body>
+</html>

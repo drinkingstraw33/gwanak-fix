@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= stylesheet_link_tag "CSS_1.css" %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+		<title>Customer service, FAQs are here!</title>
+	</head>
+
+		<body>
+		<%= render 'header' %>
+<hr/>
+ 	<section class="cs">
+            <div class="container">
+                <h2>고객센터</h2>
+
+                <div class="faq">
+                    <span>FAQ</span>
+                    <div class="accordion">
+                        
+                        <div>
+                            <a id="headingOne" class="acdn-header collapsed" data-toggle="collapse"  
+                               >
+                                관악수리점은 어떤 서비스 인가요?
+                            </a>
+                            <div id="collapseOne" class="collapse acdn-body" aria-labelledby="headingOne">
+                                관악수리점은 관악구에 있는 모든 휴대폰수리점 정보를 한 번에 쉽게 볼 수 있도록 모아 제공하는 사이트입니다.<br/>
+                                휴대폰 수리가 필요한 고객은 휴대폰 기종, 파손유형, 위치 별로 휴대폰수리점들을 찾아볼 수 있고, 상세정보도 확인할 수 있습니다.
+                            </div>
+                        </div>
+                        <div>
+                            <a id="headingTwo" class="acdn-header collapsed" data-toggle="collapse"  
+                               >
+                                관악구 모든 수리점 정보가 다 있나요?
+                            </a>
+                            <div id="collapseTwo" class="collapse acdn-body" aria-labelledby="headingTwo">
+                               저희 관악수리점 팀원들이 모을 수 있는 모든 관악구 내 수리점 정보들을 다 모아 제공하고 있습니다. 네이버, 카카오맵 등에 추가되어있지만 현재 영업하지 않는 곳들은 빼고, 현재 실제로 운영하고 있는 곳들의 정보들만 제공하고 있습니다. 새로 추가되는 수리점이 있다면 업데이트 해드릴게요!
+                            </div>
+                        </div>
+                        <div>
+                            <a id="headingThree" class="acdn-header collapsed" data-toggle="collapse"   >
+                                나와 있는 정보와 실제 가격이 다르면 어떡하나요?
+                            </a>
+                            <div id="collapseThree" class="collapse acdn-body" aria-labelledby="headingThree">
+                                저희를 통해 알게 된 수리점과의 거래 중 불편을 겪게 해드려 죄송합니다. 저희 관악수리점은 중개/알선업이 아닌 정보제공 플랫폼으로 수리점의 서비스에 직접 개입하거나 수수료를 받고 있지 않아 직접적으로 해결을 도와드리기 어렵습니다. 다만 저희 페이지에 제시되어있는 것과 다른 정보를 제시하는 업체가 있다면 저희에게 카카오톡 채널로 제보해주세요! 적극 반영하여 페이지를 업데이트 하겠습니다. 또한 보다 정확한 가격정보를 위해 저희가 제공해드리는 연락처로 한 번 더 직접 확인해보시는 것을 적극 추천드립니다. 
+
+                            </div>
+                        </div>
+                        <div>
+                            <a id="heading4" class="acdn-header collapsed" data-toggle="collapse"  >
+                                휴대폰 기종, 파손유형, 위치 다 입력해서 찾아봐야하나요?
+                            </a>
+                            <div id="heading4" class="collapse acdn-body" aria-labelledby="headingThree">
+                                저희 관악수리점은 고객님의 편의를 위해 고객님께서 찾고싶으신 정보 한 가지 만으로도 검색 가능하도록 해드리고 있습니다. 휴대폰 기종별, 파손유형별, 위치 별 모두 검색 가능하시니 편하신대로 검색해보세요!
+                            </div>
+                        </div>
+	<div>
+                            <a id="heading5" class="acdn-header collapsed" data-toggle="collapse" role="button">
+                                수리업체와 연락은 어떻게 할 수 있나요?
+                            </a>
+                            <div id="heading5" class="collapse acdn-body" aria-labelledby="headingThree">
+                                저희가 수리점 상세페이지에 제공해드리는 정보들로 직접 전화를 해보시거나, 수리업체의 홈페이지를 방문해보실 수 있습니다. 
+                            </div>
+                        </div>
+						
+						<div class="ask-kakao">
+                    <p style="text-align:center">보다 자세한 상담을 위해서는 카카오톡으로 문의해 주세요.</p>
+                    <a class="kakaolink" href="http://pf.kakao.com/_varexb">
+                        친구추가
+                    </a>
+                </div>
+            </div>
+	</body>
+</html>
