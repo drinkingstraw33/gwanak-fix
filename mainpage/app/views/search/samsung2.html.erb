@@ -16,23 +16,49 @@
 					<td colspan="3"> <img class="logo_" src="/images/samsung_logo.png" alt="SAMSUNG"> </td>
 				</tr>
 				<tr>
-					<th colspan="3">Galaxy Note</th>
+					<th colspan="3"><%= @series %></th>
 				</tr>
 			</thead>
 			<tbody>
 				 <td>
-			        <form action="search/damage" method="POST">
+			        <form action="/search/damage/">
 						<section class="model-selection">
-				     		<label for="Nsr"></label>
-  				        		<select id="Nsr">
-				     				<option value="Note10">Note 10</option>
-			            			<option value="Note10+">Note 10+</option>
-			            			<option value="Note9">Note 9</option>
-			            			<option value="Note8">Note 8</option>
-			            			<option value="Note7">Note 7</option>
-			            			<option value="Note FE">Note FE</option>
-			            			<option value="Note5">Note 5</option>
-			            		</select>
+				     		<label for="phone"></label>
+  				    		<select name="phone">
+							  	<optgroup id="Galaxy S" disabled hidden>
+									<option value="s8">8</option>
+									<option value="s8+">8+</option>
+									<option value="s9">9</option>
+									<option value="s9+">9+</option>
+									<option value="s10">10</option>
+									<option value="s10+">10+</option>
+									<option value="s10e">10e</option>
+									<option value="s20">20</option>
+									<option value="s20+">20+</option>
+									<option value="s20u">20 ultra</option>
+
+								</optgroup>
+								<optgroup id="Galaxy Note" disabled hidden>
+									<option value="nfe">FE</option>
+									<option value="n8">8</option>
+									<option value="n9">9</option>
+									<option value="n10">10</option>
+									<option value="n10+">10+</option>
+								</optgroup>
+								<optgroup id="Galaxy A" disabled hidden>
+									<option value="a30">30</option>
+									<option value="a40">40</option>
+									<option value="a50">50</option>
+									<option value="a8">8</option>
+									<option value="a9">9</option>
+									<option value="a10">10</option>
+								</optgroup>
+							<script type="text/javascript"></script>
+							<script>
+								var selected = document.getElementById('<%= @series %>');
+								selected.disabled= false;
+								selected.hidden = false;
+							</script>
           					<br>
           					<br>
 			    	    </section>

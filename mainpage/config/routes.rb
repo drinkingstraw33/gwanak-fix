@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     resources :fixes
   end
   
+  get 'shops/list/phone/:fixes_phone', to: 'shops#search_phone'
+  get 'shops/list/loc', to: 'shops#search_loc'
+
+
   get 'search/intro'
 
   get 'search/company'

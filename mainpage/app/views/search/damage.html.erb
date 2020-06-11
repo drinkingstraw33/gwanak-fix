@@ -20,7 +20,7 @@
 			<tbody>
 				<tr>
 					<td colspan="3">
-					<form action="/shops/list" method="POST">
+					<form action="/shops/list/phone/<%= @phone %>">
 					<section class="dmg-selection">
           				<input type="checkbox" name="dmg" id="screen" value="screen">
           				<label for="screen">액정파손</label>
@@ -39,16 +39,16 @@
           				<br>
           				<input type="checkbox" name="dmg" id="camera" value="camera">
           				<label for="camera">카메라 렌즈</label>
-        		</section>
-        		<br>
-        		<section class="submission">
-        			<input type="submit" value="Submit">
-        		</section>
-        	</form>
-        </td>
-        <tr>
-					<td colspan="3"> <a href = "/welcome/list">잘 모르겠어요</a> </td>
-				</tr>  
+					</section>
+					<br>
+					<section class="submission">
+						<input type="submit" value="Submit">
+					</section>
+					</form>
+					</td>
+				<tr>
+				<td colspan="3"> <a href = "/shops/list/<%= @phone %>">잘 모르겠어요</a> </td>
+			</tr>  
 			</tbody>
 		<hr/>
 

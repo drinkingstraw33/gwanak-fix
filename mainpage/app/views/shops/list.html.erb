@@ -23,19 +23,19 @@
 <div class="listbody">
 				<tbody>
 				<% @shops.each do |shop| %>
-				<tr>
-					<td>
-					<p><%= shop.dong %></p>
-					</td>
-					<td><p>
-						<%= link_to shop.title, shop_path(shop) %>
-						</p>
-					</td>
-					<td><p>
-						<%= shop.time %>
-						</p></td>
+					<tr>
+						<td>
+						<p><%= shop.dong %></p>
+						</td>
+						<td><p>
+							<%= link_to shop.title, shop_path(shop) %>
+							</p>
+						</td>
+						<td><p>
+							<%= shop.time %>
+							</p></td>
 					</tr>
-					<% end %>
+				<% end %>
 					
 				</tbody>
 </div>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<%= stylesheet_link_tag "CSS_1.css" %>
@@ -9,6 +10,7 @@
 
 	<body>
 		<%= render 'header' %>
+	
 
 		<table>
 			<thead>
@@ -16,23 +18,45 @@
 					<td colspan="3"> <img class="logo_" src="/images/apple_logo.png" alt="APPLE"> </td>
 				</tr>
 				<tr>
-					<th colspan="3">after X</th>
+					<th colspan="3"><%= @series %></th>
 				</tr>
 			</thead>
 			<tbody>
 				 <td>
-			        <form action="/search/damage" method="POST">
-				     	<label for="Xsrs"></label>
-  				    		<select name="Xsrs" id="Xsrs">
-				     			<option value="XR">XR</option>
-			            		<option value="X">X</option>
-			            		<option value="XS">XS</option>
-			            		<option value="XS MAX">XS MAX</option>
-			            		<option value="11">11</option>
-			            		<option value="11 PRO">11 PRO</option>
-			            		<option value="11 PRO MAX">11 PRO MAX</option>
-			            		<option value="SE2">SE2</option>
-			            	</select>
+			        <form action="/search/damage/">
+				     	<label for="phone"></label>
+  				    		<select name="phone">
+							  	<optgroup id="SE, before 5S" disabled hidden>
+									<option value="i5">5</option>
+									<option value="i5s">5s</option>
+									<option value="ise">SE</option>
+									<option value="ise2">SE2</option>
+								</optgroup>
+								<optgroup id="6, 7, 8" disabled hidden>
+									<option value="i6">6</option>
+									<option value="i6+">6+</option>
+									<option value="i6s">6S</option>
+									<option value="i6s+">6S+</option>
+									<option value="i7">7</option>
+									<option value="i7+">7+</option>
+									<option value="i8">8</option>
+									<option value="i8+">8+</option>
+								</optgroup>
+								<optgroup id="after X" disabled hidden>
+									<option value="ix">X</option>
+									<option value="ixr">XR</option>
+									<option value="ixs">XS</option>
+									<option value="ixsm">XS MAX</option>
+									<option value="i11">11</option>
+									<option value="i11p">11 PRO</option>
+									<option value="i11pm">11 PRO MAX</option>
+								</optgroup>
+							<script type="text/javascript"></script>
+							<script>
+								var selected = document.getElementById('<%= @series %>');
+								selected.disabled= false;
+								selected.hidden = false;
+							</script>
           					<br>
           					<br>
 			        	<section class="submission">

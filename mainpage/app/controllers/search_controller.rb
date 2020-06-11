@@ -9,12 +9,14 @@ class SearchController < ApplicationController
   end
 
   def apple2
+    @series = params[:series]
   end
 
   def samsung1
   end
 
   def samsung2
+    @series = params[:series]
   end
 
   def lg
@@ -24,6 +26,13 @@ class SearchController < ApplicationController
   end
 
   def damage
+    @phone = params[:phone]
+    if params[:max] == 'yes'
+      @phone = @phone+"m"
+    end
+      if params[:pro] == 'yes'
+      @phone = @phone+"s"
+    end
   end
 
   def location
