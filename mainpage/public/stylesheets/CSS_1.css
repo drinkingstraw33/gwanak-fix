@@ -5,7 +5,7 @@ body {
 
 .header {
   display: block;
-  padding-right: 10px
+  padding-right: 10px;
   padding-left: 40px;
 }
 
@@ -267,8 +267,20 @@ tr td {
    margin-top: 50px;
 }
 
-.mapimage {
+#mapimage {
    text-align: center;
    display: block;
-   margin: 2px;
+   margin: auto;
+   width: 500px;
+   height: 400px;
 }
+
+.custom_overlay{
+  text-align:center;
+  padding:6px 15px; 
+  font-weight:bold;
+  background: white;
+  margin-bottom: 50px;
+}
+.custom_overlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+.custom_overlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:40px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
