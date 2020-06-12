@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 		<%= stylesheet_link_tag "CSS_1.css" %>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
@@ -124,9 +127,11 @@
 					// 커스텀 오버레이를 지도에 표시합니다
 					customOverlay.setMap(map);
 
-					map.relayout();
 					// 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
 					map.setCenter(coords);
+
+					map.relayout();
+
 				});
 
 

@@ -1,3 +1,4 @@
+
 body {
 	width: 1920px;
   height: 1080px;
@@ -13,7 +14,7 @@ body {
 .logo {
   max-width: 200px;
   padding: 30px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
 }
 
 .logo_ {
@@ -23,12 +24,12 @@ body {
 
 .backgr {
   max-width: 1400px;
+  height:750px;
   display: inline-block;
   position: relative;
 }
 
 .button {
-  padding-bottom: 50px;
   z-index: 1;
   display: inline-block;
   background: #447F94;
@@ -41,13 +42,28 @@ body {
   outline: none;
   cursor: pointer;
   letter-spacing: 2px;
-  position: absolute;
-  bottom: 40px;
-  right: 520px;
+  position: relative;
+  top:54%;
+  text-decoration : none !important;
+}
+
+.index_right{
+  width: 30%;
+  float: right;
+  height: 750px;
+  position: relative;
+}
+.index_left{
+  width: 70%;
+  float: left;
+  height: 750px;
+  position: relative;
 }
 
 .nav {
-	text-align : right;
+  text-align : right;
+  float: right;
+  margin-top: 74px;
 }
 
 .nav a{
@@ -66,28 +82,33 @@ a {
   text-decoration: none;
 }
 
+.split{
+  width: 70%;
+  height: 50%;
+  margin:auto;
+}
+
 .split_ver {
   height: 100%;
   width: 50%;
-  position: fixed;
+  position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  padding-top: 20px;
   text-align: center;
 }
 
 .split_hor {
-	height: 30%;
+	height: 50%;
 }
 
 .left {
   left: 0;
-  text-align: right;
+  float: left;
  }
 
 .right {
   right: 0;
-  text-align: left;
+  float: right;
 }
 
 .top {
@@ -112,7 +133,7 @@ table {
   margin: 20px auto;
   overflow-y: scroll;
   position: static;
-  width: auto;
+  width: 100%;
   font-size: 18px;
 }
 
@@ -128,15 +149,21 @@ tr th {
   color: #f4f7f8;
   border-bottom: 1px solid #FFF;
   margin-bottom: 5px;
-  padding: 20px;
-  width: 33.3333%;
+  padding: 5px;
+  width: auto;
+  text-align: center;
 }
 
-tr td {
+
+tr {
   background: #f4f7f8;
-  padding: 20px;
-  width: 33.3333%;
+  width: auto;
   font-family: 'Nanum Myeongjo';
+  text-align: center;
+}
+
+.list_tbody tr:hover{
+  background: #d2e0ea
 }
 
 .faq > span,
@@ -195,8 +222,6 @@ tr td {
 .kakaolink {
     position: fixed;
     text-align: center;
-    right: 25px;
-    bottom: 25px;
     overflow: hidden;
     background: #fae101;
     color: #3c1e1e;
@@ -206,8 +231,7 @@ tr td {
     height: 54px; 
     display: inline-block;
     border-radius: 27px;
-    padding-right: 20px;
-    padding-top: 14px;
+    text-decoration: none !important;
 }
 
 .ask-kakao {
@@ -220,12 +244,10 @@ tr td {
     display: block;
     margin: 0 auto;
     width: 220px;
-    left: 0;
-    top: auto;
-    bottom: auto;
     margin-top: 24px;
-    box-shadow: none;
-    margin-bottom: 120px;
+}
+.kakaotext{
+  margin: auto;
 }
 
 .viewTable  {
@@ -284,3 +306,26 @@ tr td {
 }
 .custom_overlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
 .custom_overlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:40px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+
+p {
+  margin: auto;
+  padding: 5px;
+}
+
+.custom-select{
+  width: 80%
+}
+
+.form-size{
+  height: 200px;
+}
+
+.model-selection{
+  height: 60%;
+}
+
+.dmg-selection{
+  width:10%;
+  text-align: left;
+  margin: auto;
+}

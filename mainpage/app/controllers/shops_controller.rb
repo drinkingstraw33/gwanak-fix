@@ -4,7 +4,9 @@ class ShopsController < ApplicationController
 
   def search_phone
     @shops = Shop.where('available LIKE ?',"%#{params[:fixes_phone]}%")
-    render 'list'
+    @phone = params[:fixes_phone]
+    @dmg = params[:dmg]
+    render 'list_search'
   end
 
   def search_loc

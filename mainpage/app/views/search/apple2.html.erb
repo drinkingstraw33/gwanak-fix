@@ -2,6 +2,9 @@
 
 <html>
 	<head>
+	<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 		<%= stylesheet_link_tag "CSS_1.css" %>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
@@ -12,7 +15,7 @@
 		<%= render 'header' %>
 	
 
-		<table>
+		<table class="split">
 			<thead>
 				<tr>
 					<td colspan="3"> <img class="logo_" src="/images/apple_logo.png" alt="APPLE"> </td>
@@ -23,9 +26,9 @@
 			</thead>
 			<tbody>
 				 <td>
-			        <form action="/search/damage/">
+			        <form class="form-size" action="/search/damage/">
 				     	<label for="phone"></label>
-  				    		<select name="phone">
+  				    		<select class="custom-select" name="phone">
 							  	<optgroup id="SE, before 5S" disabled hidden>
 									<option value="i5">5</option>
 									<option value="i5s">5s</option>

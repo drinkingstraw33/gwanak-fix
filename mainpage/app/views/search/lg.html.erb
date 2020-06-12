@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 		<%= stylesheet_link_tag "CSS_1.css" %>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
@@ -10,10 +13,10 @@
 	<body>
 		<%= render 'header' %>
 
-		<table>
+		<table class="split">
 			<thead>
 				<tr>
-					<td colspan="3"> <img class="logo_" src="lg_logo.png" alt="LG"> </td>
+					<td colspan="3"> <img class="logo_" src="/images/lg_logo.png" alt="LG"> </td>
 				</tr> 
 				<tr>
 					<th>V Series</th>
@@ -24,9 +27,9 @@
 			<tbody>
 				<tr>
 					<td>
-					<form action="/search/damage/">
+					<form class="form-size" class="form-size" action="/search/damage/">
 					<section class="model-selection">
-				     	<select name="phone">
+				     	<select class="custom-select" class="custom-select" name="phone">
 				     		<option value="v60">60</option>
 			            	<option value="v50">50</option>
 			            	<option value="v40">40</option>
@@ -55,10 +58,10 @@
 			        </td>
 
 					<td>
-					<form action="/search/damage/">
+					<form class="form-size" action="/search/damage/">
 					<section class="model-selection">
 				     <label for="phone"></label>
-				     	<select name="phone">
+				     	<select class="custom-select" name="phone">
 				     		<option value="q51">51</option>
 			            	<option value="q70">70</option>
 			            	<option value="q9">9</option>
@@ -74,10 +77,10 @@
         		</form>
         	</td>
 					<td>
-						<form action="/search/damage/">
+						<form class="form-size" action="/search/damage/">
 						<section class="model-selection">
 				     	<label for="phone"></label>
-				     	<select name="phone">
+				     	<select class="custom-select" name="phone">
 				     		<option value="x2a">2(2019)</option>
 			            	<option value="x6">6</option>
 			            	<option value="x4">4</option>
