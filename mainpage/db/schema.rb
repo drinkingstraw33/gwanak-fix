@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20200610061201) do
     t.datetime "updated_at",  null: false
     t.string   "phonenumber"
     t.string   "dong"
-    t.string   "available", array: true
+    t.string   "available"
   end
-  add_index :shops, :available, using: 'gin'
+
 end
