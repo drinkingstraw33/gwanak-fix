@@ -12,44 +12,47 @@
 
 	<body>
 		<%= render 'header' %>
-
-		<table class="split">
-			<form class="form-size" action="/search/apple2/">
-			<thead>
-				<tr>
-					<td colspan="3"> <img class="logo_" src="/images/apple_logo.png" alt="SAMSUNG"> </td>
-				</tr>
+	<hr class="border-bottom"/>
+	
+			<table >
+				<form class="form-size" action="/search/apple2/">
+				<thead>
+					<tr>
+						<td colspan="3"> <img class="logo_" src="/images/apple_logo.png" alt="SAMSUNG"> </td>
+					</tr>
+					
+					<tr>
+						<section class="series-selection">
+						<th>
+							<input type="radio" name="series" id="5s" value="SE, before 5S">
+							<label for="5s">SE, before 5S</label>
+						</th>
+						<th>
+							<input type="radio" name="series" id="6_8" value="6, 7, 8">
+							<label for="6_8">6, 7, 8</label>
+						</th>
+						<th>
+							<input type="radio" name="series" id="X" value="after X">
+							<label for="X">after X</label>
+						</th>
+					</section>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="3"> 
+							<section class="submission">
+								<input type="submit" value="Select">
+							</section>
+						</td>
+					</tr>
 				
-				<tr>
-					<section class="series-selection">
-					<th>
-						<input type="radio" name="series" id="5s" value="SE, before 5S">
-					    <label for="5s">SE, before 5S</label>
-					</th>
-					<th>
-						<input type="radio" name="series" id="6_8" value="6, 7, 8">
-					    <label for="6_8">6, 7, 8</label>
-					</th>
-					<th>
-						<input type="radio" name="series" id="X" value="after X">
-					    <label for="X">after X</label>
-					</th>
-				</section>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td colspan="3"> 
-						<section class="submission">
-        					<input type="submit" value="Select">
-        				</section>
-        			</td>
-        		</tr>
-        	
-        </tbody>
-		</form>
+			</tbody>
+			</form>
+		</>
+		
 			
-		<hr class="border-bottom"/>
+	
 
 	</body>
 </html>
