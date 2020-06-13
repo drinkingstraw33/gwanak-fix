@@ -8,11 +8,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Do+Hyeon&family=Gugi&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 		<title>Title Page Demo</title>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ed794d6ae65683bf48d8428da7d2374e&libraries=services"></script>
 	</head>
 
 	<body>
 		<%= render 'header' %>
-		<hr/>
+		<hr class="border-bottom"/>
 
 		<div class="company">
 			<h1>
@@ -60,9 +61,49 @@
 		<div class="map">
 			<p> 수리점 위치를 지도에서 확인해보세요 </p>
 			<div id="mapimage"></div>
+		</div>
+			
+		
+		<h2>수리 비용</h2>
+		
+		<table>
+			<tr>
+				<th>기종명</th>
+				<th>액정 파손</th>
+				<th>배터리 교체</th>
+				<th>메인보드</th>
+				<th>침수 세척</th>
+				<th>후면 액정</th>
+				<th>카메라 렌즈</th>
+				<th>삭제</th>
+			</tr>
+		
+		<% @shop.fixes.each do |fix| %>
+		  <tr>
+		  	<td><%= fix.phone %></td>
+		  	<td><%= fix.screen %></td>
+		  	<td><%= fix.battery %></td>
+		  	<td><%= fix.mainboard %></td>
+		  	<td><%= fix.water %></td>
+		  	<td><%= fix.back %></td>
+		  	<td><%= fix.camera %></td>
+		  	<td><%= link_to '삭제', [fix.shop, fix], method: :delete, data: {confirm: 'Are you sure?'} %></td>
+		  </tr>
+		<% end %>
+		</table>
+		
+		<%= link_to 'Edit', edit_shop_path(@shop) %>
+		<%= link_to 'Destroy', shop_path(@shop), method: :delete, data: {confirm: 'Are you sure?'} %>
+		
+		<h2>Add a comment:</h2>
+		<%= render 'fixes/form' %>
+			
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ed794d6ae65683bf48d8428da7d2374e&libraries=services"></script>
 
-			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ed794d6ae65683bf48d8428da7d2374e&libraries=services"></script>
-			<script>
+		<script type="text/javascript">
+				if(typeof kakao === "undefined"){
+					location.reload();
+				}
 				var container = document.getElementById('mapimage');
 				var options = {
 					center: new kakao.maps.LatLng(33.450701, 126.570667),
@@ -124,6 +165,9 @@
 							});
 
 					}
+
+					map.relayout();
+
 					// 커스텀 오버레이를 지도에 표시합니다
 					customOverlay.setMap(map);
 
@@ -133,46 +177,9 @@
 					map.relayout();
 
 				});
-
+					
 
 			</script>
-		</div>
-		
-		<h2>수리 비용</h2>
-		
-		<table>
-			<tr>
-				<th>기종명</th>
-				<th>액정 파손</th>
-				<th>배터리 교체</th>
-				<th>메인보드</th>
-				<th>침수 세척</th>
-				<th>후면 액정</th>
-				<th>카메라 렌즈</th>
-				<th>삭제</th>
-			</tr>
-		
-		<% @shop.fixes.each do |fix| %>
-		  <tr>
-		  	<td><%= fix.phone %></td>
-		  	<td><%= fix.screen %></td>
-		  	<td><%= fix.battery %></td>
-		  	<td><%= fix.mainboard %></td>
-		  	<td><%= fix.water %></td>
-		  	<td><%= fix.back %></td>
-		  	<td><%= fix.camera %></td>
-		  	<td><%= link_to '삭제', [fix.shop, fix], method: :delete, data: {confirm: 'Are you sure?'} %></td>
-		  </tr>
-		<% end %>
-		</table>
-		
-		<%= link_to 'Edit', edit_shop_path(@shop) %>
-		<%= link_to 'Destroy', shop_path(@shop), method: :delete, data: {confirm: 'Are you sure?'} %>
-		
-		<h2>Add a comment:</h2>
-		<%= render 'fixes/form' %>
-			
-		
 		
 </body>
 </html>
