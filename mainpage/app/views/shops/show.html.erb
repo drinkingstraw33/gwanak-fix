@@ -75,28 +75,20 @@
 				<th>침수 세척</th>
 				<th>후면 액정</th>
 				<th>카메라 렌즈</th>
-				<th>삭제</th>
 			</tr>
 		
 		<% @shop.fixes.each do |fix| %>
 		  <tr>
-		  	<td><%= fix.phone %></td>
+		  	<td><%= fix.phonenamesd %></td>
 		  	<td><%= fix.screen %></td>
 		  	<td><%= fix.battery %></td>
 		  	<td><%= fix.mainboard %></td>
 		  	<td><%= fix.water %></td>
 		  	<td><%= fix.back %></td>
 		  	<td><%= fix.camera %></td>
-		  	<td><%= link_to '삭제', [fix.shop, fix], method: :delete, data: {confirm: 'Are you sure?'} %></td>
 		  </tr>
 		<% end %>
 		</table>
-		
-		<%= link_to 'Edit', edit_shop_path(@shop) %>
-		<%= link_to 'Destroy', shop_path(@shop), method: :delete, data: {confirm: 'Are you sure?'} %>
-		
-		<h2>Add a comment:</h2>
-		<%= render 'fixes/form' %>
 			
 		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ed794d6ae65683bf48d8428da7d2374e&libraries=services"></script>
 
