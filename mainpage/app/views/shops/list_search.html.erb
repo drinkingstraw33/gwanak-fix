@@ -23,38 +23,44 @@
 		</div>
 
 		<div class = "list">
-			<table class="table" style="max-width: 1300px;">
-				<thead>
-				<tr>
-					<th scope="col">위치</th>
-					<th scope="col">수리점명</th>
-					<th scope="col">영업시간</th>
-					<th scope="col">가격</th>
-				</tr>
-				</thead>
-				<tbody class="list_tbody">
-				<% @shops.each do |shop| %>
+				<table class="table" style="max-width: 1300px;">
+					<thead>
 					<tr>
-						<td>
-						<p><%= shop.dong %></p>
-						</td>
-						<td><p>
-							<%= link_to shop.title, shop_path(shop) %>
-							</p>
-						</td>
-						<td><p>
-							<%= shop.time %>
-							</p></td>
-						<td><p>
-							<%= shop.fixes.find_by(phone:@phone).read_attribute(@dmg) %>
-						</p></td>
+						<th scope="col">위치</th>
+						<th scope="col">수리점명</th>
+						<th scope="col">영업시간</th>
+						<th scope="col">가격</th>
 					</tr>
-				<% end %>
-					
-				</tbody>
+					</thead>
+					<tbody class="list_tbody">
+					<% if @shops.length() > 0 then %>
+						<% @shops.each do |shop| %>
+							<tr>
+								<td>
+								<p><%= shop.dong %></p>
+								</td>
+								<td><p>
+									<%= link_to shop.title, shop_path(shop) %>
+									</p>
+								</td>
+								<td><p>
+									<%= shop.time %>
+									</p></td>
+								<td><p>
+									<%= shop.fixes.find_by(phone:@phone).read_attribute(@dmg) %>
+								</p></td>
+							</tr>
+						<% end %>
+					<% else %>
+						<tr><td colspan="4"><p>검색결과가 없습니다.</p></td></tr>
+					<% end %>
+					</tbody>
 
-			</table>
+				</table>
+			
 		</div>
 		<%= link_to 'New shop', new_shop_path %>
+
+		
 	</body>
 </html>
