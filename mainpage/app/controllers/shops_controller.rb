@@ -5,10 +5,12 @@ class ShopsController < ApplicationController
   def search_phone
     @shops = Shop.where('available LIKE ?',"%#{params[:fixes_phone]}%")
     @phone = params[:fixes_phone]
+
     if params[:dmg] == nil then
       @dmg = "선택안함"
     else @dmg = params[:dmg]
     end
+    
     render 'list_search'
   end
 

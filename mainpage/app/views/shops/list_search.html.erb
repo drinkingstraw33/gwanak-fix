@@ -34,7 +34,8 @@
 					</thead>
 					<tbody class="list_tbody">
 					<% if @shops.length() > 0 then %>
-						<% @shops.each do |shop| %>
+						<% @shops.each do |shop| 
+							if shop.fixes.find_by(phone:@phone) != nil then %>
 							<tr>
 								<td>
 								<p><%= shop.dong %></p>
@@ -50,7 +51,8 @@
 									<%= shop.fixes.find_by(phone:@phone).read_attribute(@dmg) %>
 								</p></td>
 							</tr>
-						<% end %>
+						<% end
+						end %>
 					<% else %>
 						<tr><td colspan="4"><p>검색결과가 없습니다.</p></td></tr>
 					<% end %>
