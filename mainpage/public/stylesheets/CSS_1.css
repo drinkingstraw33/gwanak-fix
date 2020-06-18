@@ -129,7 +129,7 @@ a {
 }
 
 .brand {
-	width: 70%;
+	width: 70% !important;
 }
 
 table {
