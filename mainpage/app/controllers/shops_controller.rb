@@ -4,7 +4,7 @@ class ShopsController < ApplicationController
 
   def search_phone
     @shops = Shop.where('available LIKE ?',"%#{params[:fixes_phone]}%")
-    @phone = params[:fixes_phone]
+    @phone = Fix.find_by(phone: params[:fixes_phone]).read_attribute('phonename')
 
     if params[:dmg] == nil then
       @dmg = "선택안함"

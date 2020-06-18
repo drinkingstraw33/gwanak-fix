@@ -35,7 +35,7 @@
 					<tbody class="list_tbody">
 					<% if @shops.length() > 0 then %>
 						<% @shops.each do |shop| 
-							if shop.fixes.find_by(phone:@phone) != nil then %>
+							if shop.fixes.find_by(phonename:@phone) != nil then %>
 							<tr>
 								<td>
 								<p><%= shop.dong %></p>
@@ -48,7 +48,7 @@
 									<%= shop.time %>
 									</p></td>
 								<td><p>
-									<%= shop.fixes.find_by(phone:@phone).read_attribute(@dmg) %>
+									<%= shop.fixes.find_by(phonename:@phone).read_attribute(@dmg) %>
 								</p></td>
 							</tr>
 						<% end
